@@ -1,0 +1,2 @@
+MAKE_LIB_NOSTD(net src/)
+TARGET_LINK_LIBRARIES(net kpi)
