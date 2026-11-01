@@ -9,6 +9,8 @@
 
 namespace LibNet::address {
 
+    constexpr uint64_t BROADCAST_MAC = 0xFFFFFFFFFFFF;
+
     class MediaAccessControlAddress {
 
         private:
