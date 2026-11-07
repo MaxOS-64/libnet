@@ -5,6 +5,8 @@
 #ifndef LIBNET_ADDRESS_PORT_H
 #define LIBNET_ADDRESS_PORT_H
 
+#include <cstdint>
+
 namespace LibNet::address {
 
     class Port {
@@ -21,8 +23,6 @@ namespace LibNet::address {
     };
 
     typedef Port port_t;
-
-
 }
 
 #endif //LIBNET_ADDRESS_PORT_H
