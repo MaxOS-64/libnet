@@ -23,7 +23,7 @@ namespace LibNet::address {
             MediaAccessControlAddress(uint8_t digit1, uint8_t digit2, uint8_t digit3, uint8_t digit4, uint8_t digit5, uint8_t digit6);
             ~MediaAccessControlAddress();
 
-            uint64_t raw_address();
+            uint64_t raw_address() const;
 
     };
 

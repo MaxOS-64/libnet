@@ -8,7 +8,7 @@ using namespace LibNet;
 using namespace LibNet::address;
 
 MediaAccessControlAddress::MediaAccessControlAddress(uint64_t address)
-: m_address(address)
+: m_raw_address(address)
 {
 }
 
@@ -29,7 +29,7 @@ MediaAccessControlAddress::MediaAccessControlAddress(uint64_t address)
  */
 MediaAccessControlAddress::MediaAccessControlAddress(uint8_t digit1, uint8_t digit2, uint8_t digit3, uint8_t digit4, uint8_t digit5, uint8_t digit6) {
 
-    m_address = (uint64_t) digit6 << 40
+    m_raw_address = (uint64_t) digit6 << 40
               | (uint64_t) digit5 << 32
               | (uint64_t) digit4 << 24
               | (uint64_t) digit3 << 16
@@ -41,6 +41,6 @@ MediaAccessControlAddress::MediaAccessControlAddress(uint8_t digit1, uint8_t dig
 
 MediaAccessControlAddress::~MediaAccessControlAddress() = default;
 
-uint64_t MediaAccessControlAddress::address() {
-    return m_address;
+uint64_t MediaAccessControlAddress::raw_address() const {
+    return m_raw_address;
 }

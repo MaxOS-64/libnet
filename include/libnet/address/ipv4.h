@@ -47,6 +47,11 @@ namespace LibNet::address {
             Subnet(MaxOS::string subnet);
             Subnet(ipv4_address_t networkd_addrres, uint8_t prefix_length);
 
+            uint8_t prefix_length();
+            ipv4_address_t address();
+
+            bool contains(ipv4_address_t address);
+
     };
 
     typedef Subnet subnet_t;
